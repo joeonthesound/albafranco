@@ -1,0 +1,10 @@
+{
+  "name": "albafranco",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio estático de Alba Franco para Cloudflare Pages.",
+  "scripts": {
+    "build": "node ./scripts/build-static.mjs",
+    "deploy": "npx wrangler@latest pages deploy dist --project-name albafranco"
+  }
+}
