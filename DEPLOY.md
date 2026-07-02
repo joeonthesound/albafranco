@@ -4,6 +4,23 @@ Este proyecto está configurado como sitio estático para Cloudflare Pages.
 
 ## Configuración recomendada en Cloudflare
 
+### Workers con assets estáticos
+
+- Build command: `npm run build`
+- Deploy command: `npx wrangler deploy`
+- Root directory: `/`
+
+El archivo `wrangler.toml` incluye:
+
+```toml
+[assets]
+directory = "./dist"
+```
+
+Esto permite que `wrangler deploy` publique el contenido estático generado en `dist`.
+
+### Pages
+
 - Framework preset: `None`
 - Build command: `npm run build`
 - Build output directory: `dist`
